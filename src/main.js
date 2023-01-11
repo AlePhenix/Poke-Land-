@@ -1,11 +1,25 @@
-const listContainer = document.querySelector('.list-container');
-const list = document.querySelector('.poke-list');
+const searchPokemon = document.getElementById('search');
+const inputSearch = document.getElementById('inputSearch');
+const pokemonImg = document.getElementById('pokemon-img');
+const pokemonNamePokedex = document.getElementById('pokemon-name-pokedex');
 const API = "https://pokeapi.co/api/v2";
+
+
+
 
 async function fetchApi (urlApi) {
     const response = await fetch(urlApi);
     const data = await response.json();
     return data;
+}
+
+searchPokemon.addEventListener('click', () => {
+    fetchApi(`${API}/pokemon/${inputSearch.value}`)
+    .then(data => pokedexSearch(data))
+});
+function pokedexSearch (pokemon) {
+    pokemonImg.src = pokemon.sprites.front_default;
+    pokemonNamePokedex.textContent = pokemon.name;
 }
 
 function GetPokemon(e){
@@ -58,5 +72,4 @@ GetPokemon(3);
 GetPokemon(4);
 GetPokemon(5);
 GetPokemon(6);
-
 
