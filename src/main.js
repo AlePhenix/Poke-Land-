@@ -6,7 +6,6 @@ const API = "https://pokeapi.co/api/v2";
 
 
 
-
 async function fetchApi (urlApi) {
     const response = await fetch(urlApi);
     const data = await response.json();
