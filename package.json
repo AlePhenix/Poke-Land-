@@ -1,0 +1,18 @@
+{
+  "name": "poke-land",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "gh-pages -d src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[Di\u001ad.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "gh-pages": "^4.0.0"
+  }
+}
