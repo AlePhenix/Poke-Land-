@@ -15,7 +15,7 @@ header {
     background-color: #cc0018;
 }
 
-.pokedex-container {
+.pokedex-slide {
     position: relative;
     height: 100vh;
     width:100%;
@@ -26,31 +26,79 @@ header {
     width: 100%;
 }
 
-.pokedex {
+.search-container {
     position: absolute;
+}
+
+#inputSearch {
+    height: 50px;
+    padding: 10px;
+    margin:15px 5px 15px 15px;
+    border-radius: 10px;
+    border: 2px solid lightgray;
+}
+#search {
+    height: 50px;
+    padding:10px;
+    margin: 15px 15px 15px 0;
+    border-radius: 10px;
+    background-color: #4f7ad2;
+    color: rgb(223, 218, 218);
+    border: 2px solid lightgray ;
+}
+#search:hover {
+    background-color: #2a64d7;
+}
+
+.pokedex-container{
+    position: relative;
+    top: 80px;
+    left: 20px;
+}
+
+.pokedex {
+    position:absolute;
 }
 
 .pokedex-parts {
     position: absolute;
 }
 .pokedex-part1 {
-    top: 30vh;
-    left: 5vw;
-    height: 350px;
+    top: 0;
+    left: 0px;
+    height: 450px;
     width: 250px;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
     box-shadow: 0 15px 0 0 #7f0614;
     background:
-    linear-gradient(#800e1b, #800e1b) 100% 18.3%/5.4em .9em,
-    linear-gradient(#800e1b, #800e1b) 0% 30%/5.3em .8em,
+    linear-gradient(#800e1b, #800e1b) 101% 61.5px/5.4em .9em,
+    linear-gradient(#800e1b, #800e1b) 0% 100px/5.3em .8em,
     linear-gradient(-25deg,transparent 20%,#800e1b 20.2%, #800e1b 28%, transparent 28.2%) 6% 0.5%/10em 7em,
     linear-gradient(#cc0018, #cc0018) 50% 50%/ 100% 100%;
     background-repeat: no-repeat;
 }
 .pokedex-part2 {
-    top: 34vh;
-    left: 6.5vw;
+    top: 130px;
+    left: 40px;
+    height: 180px;
+    width: 190px;
+    background: linear-gradient(45deg,transparent 10%,#d4f1fc 10.2%);
+    border-radius: 5px;
+}
+
+.information {
+    top:20px;
+    left: 10px;
+    height: 120px;
+    width: 170px;
+    padding: 0 30px;
+    background-color: #26b3eb;
+}
+
+.pokedex-part3 {
+    top: 20px;
+    left: 10px;
     height: 60px;
     width: 60px;
     border-radius: 50%;
@@ -60,7 +108,13 @@ header {
     90px -25px 0 -25px #8fe428,
     50px -25px 0 -22px #292929, 
     70px -25px 0 -22px #292929, 
-    90px -25px 0 -22px #292929;
+    90px -25px 0 -22px #292929,
+    60px 240px 0 -20px #f03434,
+    60px 240px 0 -17.5px #292929,
+    80px 90px 0 -25px #f03434,
+    100px 90px 0 -25px #f03434,
+    0 295px 0 -12px #34a5f0
+    ;
     background:
     radial-gradient(ellipse at 50% 50%,#26b3eb 20%,rgba(255,215,0,0) 20.5%) 50% 50%/8.5em 8.5em,
     radial-gradient(ellipse at 50% 50%,#252525 20%,rgba(255,215,0,0) 20.5%) 50% 50%/10em 10em,
@@ -68,20 +122,79 @@ header {
     background-repeat: no-repeat;
 }
 
-.information {
-    top: 50vh;
-    left: 5vw;
-    height: 150px;
-    width: 150px;
-    background-color: #26b3eb;
+.pokedex-part4 {
+    top: 280px;
+    left: 140px;
+    height: 4px;
+    width: 80px;
+    border-radius: 5px;
+    background: #292929;
+    box-shadow: 
+    0 8px 0 0 #292929,
+    0 16px 0 0 #292929;
 }
 
-.pokemon-img {
-    height: 80px;
-    width: 80px;
+.pokedex-part5 {
+    top: 340px;
+    left: 80px;
+    height: 10px;
+    width: 40px;
+    border-radius: 5px;
+    background: #4ad618;
+    box-shadow: 
+    50px 0 0 0 #d68718;
+}
+.pokedex-part6 {
+    top: 380px;
+    left: 30px;
+    height: 30px;
+    width: 120px;
+    border-radius: 5px;
+    background: #efcf1b;
+}
+.pokedex-part7 {
+    top: 350px;
+    left: 165px;
+    height: 60px;
+    width: 60px;
+    background:
+    linear-gradient(transparent 35%, #333 35.2%,#333 65%, transparent 65.2%),
+    linear-gradient(to right, transparent 35%, #333 35.2%,#333 65%, transparent 65.2%);
+}
+.pokedex-part8 {
+    top: 100px;
+    left: 10px;
+    height: 340px;
+    width: 230px;
+    border-bottom-left-radius: 20px;
+    border: 5px solid #7f0614;
+}
+.pokedex-part9 {
+    top: 65px;
+    left: 90px;
+    height: 100px;
+    width: 150px;
+    background:
+    linear-gradient(155deg,#7f0614 14%, #cc0018 14.2%, #cc0018) 0% 40%/ 10em 1em
+    ;
+    background-repeat: no-repeat ;
+    border-right: 5px solid #7f0614;
+
 }
 
 .pokemons-slide{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+}
+
+.pokemons-slide img{
+    height: 50px;
+    width: 50px;
+}
+
+
+.pokemons-slide h3{
+    font-size: 14px;
 }
