@@ -1,10 +1,11 @@
 const searchPokemon = document.getElementById('search');
 const inputSearch = document.getElementById('inputSearch');
 const pokemonImg = document.getElementById('pokemon-img');
+const IDNumber = document.getElementById('IDNumber');
+const pokemonType = document.getElementById('type');
+const imgShiny = document.getElementById('imgShiny');
 const pokemonNamePokedex = document.getElementById('pokemon-name-pokedex');
 const API = "https://pokeapi.co/api/v2";
-
-
 
 async function fetchApi (urlApi) {
     const response = await fetch(urlApi);
@@ -14,12 +15,17 @@ async function fetchApi (urlApi) {
 
 searchPokemon.addEventListener('click', () => {
     fetchApi(`${API}/pokemon/${inputSearch.value}`)
-    .then(data => pokedexSearch(data))
+    .then(data => pokedexSearch(data));
+
 });
 function pokedexSearch (pokemon) {
     pokemonImg.src = pokemon.sprites.front_default;
     pokemonNamePokedex.textContent = pokemon.name;
+    IDNumber.innerText = pokemon.id;
+    pokemonType.innerText = pokemon.types[0].type.name;
+    imgShiny.src = pokemon.sprites.front_shiny;
 }
+
 
 function GetPokemon(e){
     function pokeGenerator(startL, endL){
@@ -48,8 +54,6 @@ function GetPokemon(e){
     if (e == 6) {
         pokeGenerator(51, 61);
     }
-
-
 };
 
 function crearPokemon(pokemon, number){
@@ -64,7 +68,8 @@ function crearPokemon(pokemon, number){
     div.appendChild(h3);
 
     document.querySelector(`.play-ground${number}`).appendChild(div);
-}; 
+};
+
 GetPokemon(1);
 GetPokemon(2);
 GetPokemon(3);

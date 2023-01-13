@@ -87,14 +87,51 @@ header {
     border-radius: 5px;
 }
 
+
+
 .information {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
     top:20px;
     left: 10px;
     height: 120px;
     width: 170px;
-    padding: 0 30px;
     background-color: #26b3eb;
 }
+.information-part1 img {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    height: 80px;
+    width: 80px;
+}
+.information .information-part1 p {
+    font-weight: 600;
+    font-size: 15px;
+    margin: 5px 0 0 5px;
+}
+
+.information .information-part2 p:nth-child(1),
+.information .information-part2 p:nth-child(3),
+.information .information-part2 p:nth-child(5){
+    font-weight: 600;
+    font-size: 12px;
+}
+
+.information .information-part2 p:nth-child(2),
+.information .information-part2 p:nth-child(4){
+    font-weight: 400;
+    font-size: 12px;
+}
+
+#imgShiny {
+    position: absolute;
+    bottom: 0px;
+    left: 110px;
+    height: 50px;
+    width: 50px;
+}
+
 
 .pokedex-part3 {
     top: 20px;
