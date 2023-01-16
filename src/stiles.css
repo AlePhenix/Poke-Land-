@@ -5,9 +5,11 @@
     --hard-gray: #555;
     --gray: #aaa;
 
-/*     
-    --black:#373737;
-    --white:#f4f4f4; */
+    --transparent-white:#f4f4f4a0;
+    --transparent-black:#373737a0;
+    
+    /* --black:#f4f4f4;
+    --white:#373737; */
 }
 
 * {
@@ -20,6 +22,7 @@
 
 body {
     background-color: var(--white);
+    overflow-x: hidden;
 }
 header {
     display: grid;
@@ -213,6 +216,11 @@ header {
     background-repeat:no-repeat;
 }
 
+
+main {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
 .pokedex-slide {
     position: relative;
     height: 100vh;
@@ -409,20 +417,78 @@ header {
     border-right: 5px solid #7f0614;
 
 }
-
-.pokemons-slide{
+.pokemons-slide {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    position: relative;
+    height: 700px;
+}
+
+.play-grounds{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: repeat(13, 1fr) ;
     justify-items: center;
     align-items: center;
 }
 
-.pokemons-slide img{
+.play-grounds img{
     height: 50px;
     width: 50px;
 }
 
+.courtain-pokemons {
+    position: absolute;
+    width: 100%;
+    height: 700px;
+    background: var(--transparent-white);
+}
+.shetline {
+    position: absolute;
+    width: 250px;
+    border-radius: 5px;
+    background: var(--gray);
+}
+.shetline-top {
+    left: -5px;
+    height: 10px;
+}
+.shetline-bottom {
+    bottom: 0;
+    right: -5px;
+    height: 10px;
+}
 
-.pokemons-slide h3{
-    font-size: 14px;
+.introduction {
+    display: grid;
+    align-items: center;
+    grid-template-rows: 1fr 1fr 1fr;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.text-container{
+    display: grid;
+    align-items: center;
+    position: relative;
+    height: 140px;
+    width: 80%;
+    font-size: 25px;
+    font-weight: 500;
+    border-radius: 0 40px 40px 0;
+    border: 3px solid var(--gray);
+    color: var(--gray);
+    background-color: var(--hard-gray);
+}
+.primary-text-container {
+    left: -5px;
+}
+.secondary-text-container {
+    right: -5px;
+    justify-self: end;
+    text-align: end;
+    border-radius: 40px 0 0 40px ;
+}
+.text-container h3{
+    margin: 20px;
 }
