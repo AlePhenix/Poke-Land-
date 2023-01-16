@@ -13,20 +13,6 @@ async function fetchApi (urlApi) {
     return data;
 }
 
-searchPokemon.addEventListener('click', () => {
-    fetchApi(`${API}/pokemon/${inputSearch.value}`)
-    .then(data => pokedexSearch(data));
-
-});
-function pokedexSearch (pokemon) {
-    pokemonImg.src = pokemon.sprites.front_default;
-    pokemonNamePokedex.textContent = pokemon.name;
-    IDNumber.innerText = pokemon.id;
-    pokemonType.innerText = pokemon.types[0].type.name;
-    imgShiny.src = pokemon.sprites.front_shiny;
-}
-
-
 function GetPokemon(e){
     function pokeGenerator(startL, endL){
         for(var i = startL;i < endL; i++) {
@@ -65,3 +51,26 @@ GetPokemon(2);
 GetPokemon(3);
 GetPokemon(4);
 
+searchPokemon.addEventListener('click', () => {
+    let valueInput = inputSearch.value; 
+    if (valueInput > 905) {
+        return errorSearch();
+    }
+    fetchApi(`${API}/pokemon/${valueInput.toLowerCase()}`)
+    .then(data => pokedexSearch(data))
+    .catch(err => errorSearch());
+});
+function pokedexSearch (pokemon) {
+    pokemonImg.src = pokemon.sprites.front_default;
+    pokemonNamePokedex.textContent = pokemon.name;
+    IDNumber.innerText = pokemon.id;
+    pokemonType.innerText = pokemon.types[0].type.name;
+    imgShiny.src = pokemon.sprites.front_shiny;
+}
+function errorSearch (){
+    pokemonImg.src = '#';
+    pokemonNamePokedex.textContent = 'Pokemon Undefined';
+    IDNumber.innerText = '';
+    pokemonType.innerText = '';
+    imgShiny.src = '#';
+}

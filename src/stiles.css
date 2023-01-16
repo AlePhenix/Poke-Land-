@@ -20,7 +20,7 @@
     box-sizing: border-box;
 }
 
-body {
+body{
     background-color: var(--white);
     overflow-x: hidden;
 }
@@ -220,26 +220,108 @@ header {
 main {
     display: grid;
     grid-template-rows: 1fr 1fr;
+    overflow-x: hidden ;
 }
+.introduction-slide {
+    display: grid;
+    position: relative;
+    height: 700px;
+}
+
+.play-grounds{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+}
+
+.play-grounds img{
+    height: 50px;
+    width: 50px;
+}
+
+.courtain-pokemons {
+    position: absolute;
+    width: 100%;
+    height: 700px;
+    background: var(--transparent-white);
+}
+.shetline {
+    position: absolute;
+    width: 250px;
+    border-radius: 5px;
+    background: var(--gray);
+}
+.shetline-top {
+    left: -5px;
+    height: 10px;
+}
+.shetline-bottom {
+    bottom: 0;
+    right: -5px;
+    height: 10px;
+}
+
+.introduction {
+    display: grid;
+    align-items: center;
+    grid-template-rows: 1fr 1fr 1fr;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.text-container{
+    display: grid;
+    align-items: center;
+    position: relative;
+    width: 80%;
+    font-size: 25px;
+    font-weight: 500;
+    border-radius: 0 40px 40px 0;
+    border: 3px solid var(--gray);
+    color: var(--gray);
+    background-color: var(--hard-gray);
+}
+.primary-text-container {
+    left: -5px;
+}
+.secondary-text-container {
+    right: -5px;
+    justify-self: end;
+    text-align: end;
+    border-radius: 40px 0 0 40px ;
+}
+.text-container h3{
+    margin: 20px;
+}
+
+
+
+
 .pokedex-slide {
+    display: grid;
+    grid-template-rows: 100px 1fr;
     position: relative;
     height: 100vh;
 }
 .search-container {
-    position: absolute;
+    display: grid;
+    grid-template-columns: 1fr 100px;
+    height: 100px;
 }
 
 #inputSearch {
     height: 50px;
     padding: 10px;
-    margin:15px 5px 15px 15px;
+    margin:15px 10px 0 15px;
     border-radius: 10px;
     border: 2px solid var(--gray);
 }
 #search {
     height: 50px;
     padding:10px;
-    margin: 15px 15px 15px 0;
+    margin: 15px 15px 0 0;
     border-radius: 10px;
     background-color: #4f7ad2;
     color: var(--white);
@@ -251,8 +333,8 @@ main {
 
 .pokedex-container{
     position: relative;
-    top: 80px;
-    left: 20px;
+    justify-self: center;
+    left: -125px;
 }
 
 .pokedex {
@@ -416,78 +498,4 @@ main {
     background-repeat: no-repeat ;
     border-right: 5px solid #7f0614;
 
-}
-.introduction-slide {
-    display: grid;
-    position: relative;
-    height: 700px;
-}
-
-.play-grounds{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    justify-items: center;
-    align-items: center;
-}
-
-.play-grounds img{
-    height: 50px;
-    width: 50px;
-}
-
-.courtain-pokemons {
-    position: absolute;
-    width: 100%;
-    height: 700px;
-    background: var(--transparent-white);
-}
-.shetline {
-    position: absolute;
-    width: 250px;
-    border-radius: 5px;
-    background: var(--gray);
-}
-.shetline-top {
-    left: -5px;
-    height: 10px;
-}
-.shetline-bottom {
-    bottom: 0;
-    right: -5px;
-    height: 10px;
-}
-
-.introduction {
-    display: grid;
-    align-items: center;
-    grid-template-rows: 1fr 1fr 1fr;
-    position: absolute;
-    height: 100%;
-    width: 100%;
-}
-
-.text-container{
-    display: grid;
-    align-items: center;
-    position: relative;
-    height: 140px;
-    width: 80%;
-    font-size: 25px;
-    font-weight: 500;
-    border-radius: 0 40px 40px 0;
-    border: 3px solid var(--gray);
-    color: var(--gray);
-    background-color: var(--hard-gray);
-}
-.primary-text-container {
-    left: -5px;
-}
-.secondary-text-container {
-    right: -5px;
-    justify-self: end;
-    text-align: end;
-    border-radius: 40px 0 0 40px ;
-}
-.text-container h3{
-    margin: 20px;
 }
