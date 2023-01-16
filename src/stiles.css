@@ -417,7 +417,7 @@ main {
     border-right: 5px solid #7f0614;
 
 }
-.pokemons-slide {
+.introduction-slide {
     display: grid;
     position: relative;
     height: 700px;
@@ -426,7 +426,6 @@ main {
 .play-grounds{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: repeat(13, 1fr) ;
     justify-items: center;
     align-items: center;
 }
