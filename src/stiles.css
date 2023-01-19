@@ -20,6 +20,10 @@
     box-sizing: border-box;
 }
 
+.none {
+    display: none;
+}
+
 body{
     background-color: var(--white);
     overflow-x: hidden;
@@ -379,7 +383,7 @@ main {
     width: 170px;
     background-color: #26b3eb;
 }
-.information-part1 img {
+#informationImg {
     position: absolute;
     bottom: 0px;
     left: 0px;
@@ -405,7 +409,7 @@ main {
     font-size: 12px;
 }
 
-#imgShiny {
+#shinyImg {
     position: absolute;
     bottom: 0px;
     left: 110px;
