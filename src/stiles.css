@@ -347,8 +347,6 @@ header {
 
 
 main {
-    display: grid;
-    grid-template-rows: 1fr 1fr;
     overflow-x: hidden ;
 }
 .introduction-slide {
@@ -430,7 +428,7 @@ main {
 
 .pokedex-slide {
     display: grid;
-    grid-template-rows: 100px 1fr;
+    grid-template-rows: 80px 1fr;
     position: relative;
     height: 100vh;
 }
