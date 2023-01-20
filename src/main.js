@@ -1,3 +1,7 @@
+const buttonDarkmode = document.getElementById('buttonDarkmode');
+const sunIcon = document.getElementById('sunIcon');
+const moonIcon = document.getElementById('moonIcon');
+const pokemonHeader = document.getElementById('pokemonHeader');
 const searchPokemon = document.getElementById('search');
 const inputSearch = document.getElementById('inputSearch');
 const pokemonNamePokedex = document.getElementById('pokemon-name-pokedex');
@@ -10,12 +14,59 @@ const sectionShiny = document.getElementById('sectionShiny');
 const shinyImg = document.getElementById('shinyImg');
 const API = "https://pokeapi.co/api/v2";
 
+
+document.documentElement.style.setProperty('--black', '#373737')
+document.documentElement.style.setProperty('--white', '#f4f4f4')
+document.documentElement.style.setProperty('--midium-black', '#777')
+document.documentElement.style.setProperty('--hard-gray', '#555')
+document.documentElement.style.setProperty('--soft-black', '#aaa')
+document.documentElement.style.setProperty('--gray', '#aaa')
+document.documentElement.style.setProperty('--gray-pokeball', '#444')
+document.documentElement.style.setProperty('--transparent-white', '#f4f4f4a0')
+document.documentElement.style.setProperty('--transparent-black', '#373737a0')
+
+var counter = 0;
+buttonDarkmode.addEventListener('click', () => {
+    if (counter == 0) {
+        document.documentElement.style.setProperty('--black', '#f4f4f4');
+        document.documentElement.style.setProperty('--white', '#373737');
+        document.documentElement.style.setProperty('--midium-black', '#777');
+        document.documentElement.style.setProperty('--hard-gray', '#555');
+        document.documentElement.style.setProperty('--soft-black', '#ddd')
+        document.documentElement.style.setProperty('--gray', '#ddd');
+        document.documentElement.style.setProperty('--gray-pokeball', '#888');
+        document.documentElement.style.setProperty('--transparent-white', '#373737a0');
+        document.documentElement.style.setProperty('--transparent-black', '#f4f4f4a0');
+        pokemonHeader.classList.add('none');
+        sunIcon.classList.add('none');
+        moonIcon.classList.remove('none');
+        console.log('light');
+        counter++;
+    }
+    else if (counter == 1) {
+        document.documentElement.style.setProperty('--black', '#373737')
+        document.documentElement.style.setProperty('--white', '#f4f4f4')
+        document.documentElement.style.setProperty('--midium-black', '#777')
+        document.documentElement.style.setProperty('--hard-gray', '#555')
+        document.documentElement.style.setProperty('--soft-black', '#aaa')
+        document.documentElement.style.setProperty('--gray', '#aaa')
+        document.documentElement.style.setProperty('--gray-pokeball', '#444')
+        document.documentElement.style.setProperty('--transparent-white', '#f4f4f4a0')
+        document.documentElement.style.setProperty('--transparent-black', '#373737a0')
+        pokemonHeader.classList.remove('none');
+        sunIcon.classList.remove('none');
+        moonIcon.classList.add('none')
+        console.log('dark');
+        counter--;
+    }
+})
+
+
 async function fetchApi (urlApi) {
     const response = await fetch(urlApi);
     const data = await response.json();
     return data;
 }
-
 function GetPokemon(e){
     function pokeGenerator(startL, endL){
         for(var i = startL;i < endL; i++) {
@@ -86,3 +137,4 @@ function errorSearch (){
     informationImg.classList.add('none');
 
 }
+
