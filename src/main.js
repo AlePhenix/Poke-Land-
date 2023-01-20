@@ -37,7 +37,7 @@ buttonDarkmode.addEventListener('click', () => {
         document.documentElement.style.setProperty('--gray-pokeball', '#888');
         document.documentElement.style.setProperty('--transparent-white', '#373737a0');
         document.documentElement.style.setProperty('--transparent-black', '#f4f4f4a0');
-        pokemonHeader.classList.add('none');
+        pokemonHeader.classList.add('pokemonDark');
         sunIcon.classList.add('none');
         moonIcon.classList.remove('none');
         console.log('light');
@@ -53,7 +53,7 @@ buttonDarkmode.addEventListener('click', () => {
         document.documentElement.style.setProperty('--gray-pokeball', '#444')
         document.documentElement.style.setProperty('--transparent-white', '#f4f4f4a0')
         document.documentElement.style.setProperty('--transparent-black', '#373737a0')
-        pokemonHeader.classList.remove('none');
+        pokemonHeader.classList.remove('pokemonDark');
         sunIcon.classList.remove('none');
         moonIcon.classList.add('none')
         console.log('dark');

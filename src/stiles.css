@@ -152,6 +152,7 @@ header {
     border:10px solid var(--gray-pokeball);
 }
 
+
 .pokemon-header-continer{
     position: relative;
     justify-self: start ;
@@ -195,40 +196,42 @@ header {
     border-radius: 0 100% 0 65%;
 }
 .eye-pupil {
-    height: 25px;
-    width: 10px;
-    background-color: var(--black);
+    height: 8px;
+    width: 8px;
+    background-color: #f4f4f4;
     border-radius: 50%;
 }
 .eye1-pupil {
-    margin: -5px 0 0 5px;
+    margin: 5px 0 0 12px;
+    box-shadow: -5px 5px 0 5px var(--black);
 }
 .eye2-pupil {
-    margin: -5px 0 0 10px;
+    margin: 5px 0 0 10px;
+    box-shadow: 5px 5px 0 5px var(--black);
 }
-.pokemon-part .ear {
-    bottom: 130px;
+.ear {
+    top: -10px;
     height: 100px;
-    width: 40px;
-    background-repeat: no-repeat;
+    width: 35px;
+    border-radius: 100% ;
 }
 .ear1{
     right: 120px;
-    border-radius: 50% 200% 0 200%;
-    rotate: -20deg;
+    rotate: -30deg;
     background: 
-    radial-gradient( var(--midium-black) 60%, rgba(0,0,0,0.01) 60.2%)40% 170%/50px 70px,
+    radial-gradient( var(--midium-black) 60%, rgba(0,0,0,0.01) 60.2%)40% 140%/50px 70px,
     radial-gradient(#ffdd00 60%, rgba(0,0,0,0.01) 60.2%)50% 90%/50px 70px,
     linear-gradient(var(--midium-black), var(--midium-black));
+    background-repeat: no-repeat;
 }
 .ear2 {
     right: 20px;
-    border-radius: 200% 50% 200% 0;
-    rotate: 20deg;
+    rotate: 30deg;
     background:
-    radial-gradient( var(--midium-black) 60%, rgba(0,0,0,0.01) 60.2%)60% 170%/50px 70px,
+    radial-gradient( var(--midium-black) 60%, rgba(0,0,0,0.01) 60.2%)60% 140%/50px 70px,
     radial-gradient(#ffdd00 60%, rgba(0,0,0,0.01) 60.2%)50% 90%/50px 70px,
     linear-gradient(var(--midium-black), var(--midium-black));  
+    background-repeat: no-repeat;
 }
 .pokemon-body {
     position: absolute;
@@ -252,6 +255,95 @@ header {
     linear-gradient(var(--hard-gray), var(--hard-gray));
     background-repeat:no-repeat;
 }
+
+.pokemon-part {
+    position: absolute;
+    height: 200px;
+    width: 200px;
+}
+.pokemon-part div{
+    position: absolute;
+}
+.pokemonDark .head {
+    background:
+    radial-gradient(ellipse, #ffc1bd 60%, rgba(0, 0, 0, 0.01) 60.2%)48% 40px/10px 10px,
+    radial-gradient(ellipse, #741e18 60%, rgba(0, 0, 0, 0.01) 60.2%)51% 50px/8px 8px,
+    radial-gradient(ellipse, #cc0018 60%, rgba(0, 0, 0, 0.01) 60.2%)50% 40px/20px 20px,
+    radial-gradient(ellipse, #252525 60%, rgba(0, 0, 0, 0.01) 60.2%)50% 90%/8px 4px,
+    linear-gradient(#dbbfd4, #dbbfd4);
+    background-repeat:no-repeat;
+}
+.pokemonDark .eye {
+    background: #312963;
+}
+.pokemonDark .eye-pupil {
+    height: 15px;
+    width: 15px;
+    background-color: #f4f4f4;
+}
+.pokemonDark .eye1-pupil {
+    margin: 0px 0 0 5px;
+    box-shadow: 12px 22px 0 5px #655a94;
+}
+.pokemonDark .eye2-pupil {
+    margin: 0px 0 0 10px;
+    box-shadow: -12px 22px 0 5px #655a94;
+}
+.pokemonDark .ear1{
+    right: 120px;
+    rotate: -30deg;
+    background: 
+    radial-gradient(ellipse, #655a94 50%, transparent 50.2%) -5px -20px/35px 140px,
+    linear-gradient(#dbbfd4, #dbbfd4);
+    background-repeat: no-repeat;
+}
+.pokemonDark .ear2 {
+    right: 20px;
+    rotate: 30deg;
+    background:
+    radial-gradient(ellipse, #655a94 50%, transparent 50.2%) 10px -20px/35px 140px,
+    linear-gradient(#dbbfd4, #dbbfd4);  
+    background-repeat: no-repeat;
+}
+.pokemonDark .ear-hear {
+    position: absolute;
+    height: 30px;
+    width: 80px;
+    background-color: #dbbfd4;
+}
+.pokemonDark .ear-hear1 {
+    top: 55px;
+    left: 10px;
+    rotate: -15deg;
+    border-radius: 100% 0 100% 0;
+    box-shadow: 30px 10px 0 -5px #cfacc7;
+}
+.pokemonDark .ear-hear2 {
+    top: 55px;
+    right: -20px;
+    rotate: 12deg;
+    border-radius: 0 100% 0 100%;
+    box-shadow: -30px 10px 0 -5px #cfacc7;
+}
+.pokemonDark .pokemon-body {
+    background-color: #cfacc7 ;
+}
+.pokemonDark .tail {
+    bottom:-20px;
+    right: -50px;
+    height: 100px;
+    width: 120px;
+    border-radius: 0;
+    background:
+    linear-gradient(var(--white), var(--white)) 84px 20px/ 20px 20px,
+    radial-gradient(ellipse, var(--white) 50%, transparent 50.2%) 55px 20px/ 65px 120px,
+    radial-gradient(ellipse, #cfacc7 50%, transparent 50.2%) 42px 15px/ 70px 100px,
+    radial-gradient(ellipse, var(--white) 50%, transparent 50.2%) 10px -5px/ 50px 150px,
+    radial-gradient(ellipse, #cfacc7 50%, transparent 50.2%) 20px -10px/ 50px 150px;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
 
 
 main {
